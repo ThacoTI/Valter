@@ -1,0 +1,387 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --fonte-padrao: Arial, Verdana;
+  --fonte-destaque: 'Bebas Neue', cursive;
+}
+body{
+    
+    
+}
+header{
+    
+    background-image: url('AdobeStock_62132458-removebg-preview.png');
+    
+    min-width: 200px;
+    
+  
+    padding: 20px;
+    margin-bottom: 50px;
+    height: 300px;
+    margin: auto;
+  
+   
+    
+    
+    
+}
+div#tudo{
+  position: relative;
+  width: 100%;
+  height: 80%;
+  
+}
+div#logo{
+
+  position: absolute;
+  background: url('verdade.png');
+  height: 50%;
+  width: 15%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 10%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+div#logo>img{
+  height: 100px;
+  width: 100px;
+  padding-top: 20px;
+  background-color: darkred;
+}
+div#txt{
+  position: absolute;
+  left:50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 10px;
+  
+
+}
+div#txt h1{
+  text-align: center;
+  color: white;
+  font-family: var(--fonte-destaque);
+  font-size: 7vw;
+  height: auto;
+  font-weight: bolder;
+  text-shadow: 7px 7px 10px rgba(0, 0, 0, 0.932);
+  margin: auto;
+  padding-top: 15px;
+}
+
+header p{
+    text-align: center;
+    color: white;
+    font-size: 2em;
+  	font-weight:bolder;
+}
+
+
+nav{
+    
+    background-color: #012626;
+    padding: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.658);
+    
+    
+    
+}
+nav > a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+  	font-size:1.5em;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+
+nav>a:hover {
+  background-color: #A4A69C;
+  color: black;
+  border-radius: 10px;
+  
+
+}
+
+/* Estilo do ícone do Instagram */
+nav .social {
+    float: right;
+    color: deeppink; /* Cor do ícone */
+    font-size: 29px; /* Tamanho do ícone */
+    padding: 1px;
+    
+}
+
+nav .social:hover {
+    color: lightskyblue; /* Cor do ícone ao passar o mouse */
+}
+nav .x {
+    float: right;
+    color: red; /* Cor do ícone */
+    font-size: 29px; /* Tamanho do ícone */
+    padding: 1px;
+    margin-right: 20px;
+    
+}
+nav .fac{
+    float: right;
+    color: royalblue; /* Cor do ícone */
+    font-size: 29px; /* Tamanho do ícone */
+    padding: 1px;
+    margin-right: 20px;
+}
+div#meio{
+  height: auto;
+  width: 100vw;
+  background-color: white;
+  
+}
+div#meio >h2{
+  background-color: #012E40;
+  color: white;
+  text-align: center;
+  padding:25px;
+  font-size: 5vw;
+  font-family: var(--fonte-destaque);
+  text-shadow: 7px 7px 10px black;
+}
+
+
+.gallery {
+    /* Estilos para a galeria de fotos */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.gallery img {
+  
+  
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+     box-shadow: -5px 5px 5px #32402C;
+    box-sizing: border-box;
+   
+    
+}
+
+div#cont{
+    position: relative;
+    
+    max-width: 95%; /* Defina um limite máximo para evitar que a div fique muito grande em telas grandes */
+    margin: auto;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    z-index: 100;
+    
+  
+  
+  
+  
+}
+.gallery img:hover{
+  transform: translate(-5px, 5px);
+  box-shadow: -5px 5px 5px #32402C;
+  
+}
+#cont {
+    /* Estilos para o contêiner da galeria */
+    text-align: center;
+}
+
+
+
+.gallery figure {
+    /* Estilos para cada figura (imagem + legenda) */
+    position: relative;
+    
+}
+
+
+
+.gallery figcaption {
+    /* Estilos para a legenda da imagem (tooltip) */
+    position: absolute;
+    bottom: 0;
+    
+    left: 0;
+    right: 0;
+    opacity: 0;
+   
+  
+    
+}
+
+.gallery figure:hover figcaption {
+    /* Mostrar a legenda da imagem ao passar o mouse */
+    opacity: 1;
+    color: white;
+    font-weight: bolder;
+    background-color: #262626;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    
+    width: 50%;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    
+}
+
+div.container{
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    background-color: white;
+    
+}
+div.box{
+    
+        min-width: 300px;
+        max-width: 800px;
+        width: 45%;
+        height: 500px;
+        
+        margin: 25px;
+        box-sizing: border-box;
+        font-size: 20px;
+        border-radius: 10px;
+    
+}
+div#lin {
+  background-image: url('piriquitos-wallpaper-preview.jpg');
+  background-attachment: fixed;
+}
+#t1{
+
+  overflow-y: auto;
+  
+}
+div#t1 >h2{
+    padding-top: 5px;
+    text-align: center;
+}
+div#t1 >p{
+    text-align: justify;
+    line-height: 1.5em;
+    padding-top: 10px;
+    text-indent: 25px;
+
+}
+div#t2{
+    background-image: url('Agapornis_Agapone_Pássaro_5433(14107).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: -5px -5px  7px #0000003a;
+}
+
+div#t4{
+    width: 30%;
+    height: 600px;
+    background-image: url('galo.jpg');
+    box-shadow: 5px 5px  7px #0000003a;
+}
+div#t5{
+  display: inline-block;
+  width: 65%;
+  height: 600px;
+  padding: 20px;
+  background-color:  #2066248a;
+  color:black;
+  box-shadow: -5px 5px  7px #0000003a ;
+  overflow-y: auto;
+}
+div#t5>ul{
+    text-decoration: none;
+    
+}
+div#t5 >h1{
+    text-align: center;
+}
+div#t5 p{
+  font-size: justify;
+  text-indent: 30px;
+  line-height: 1.5em;
+}
+li{ 
+  font-weight: bold;
+  text-decoration: none;
+  list-style: none;
+  font-size: 24px;
+  
+  
+}
+
+strong{
+    color: black;
+    
+}
+div.so{
+   width: 100%;
+   height: auto;
+   padding-top: 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   flex-flow: wrap;
+   box-shadow: 0px -5px 5px #949494;
+   background-image: linear-gradient(to top, #BFBFB8,#A4A69C)
+}
+div.final{
+    min-width: 200px;
+    max-width: 800px;
+    width: 50%;
+    height: 300px;
+    
+    
+    box-sizing: border-box;
+    font-size: 20px;
+    border-radius: 10px;
+}
+div#sobre{
+  font-family: var(--fonte-padrao);
+  line-height: 1.5em;
+  text-indent: 25px;
+  overflow-y: scroll;
+  text-align: justify;
+}
+div#fl{
+  width: 45%;
+  padding-top: 50px;
+  
+}
+div#ft{
+  width: 200px;
+  height: 195px;
+  margin: auto;
+  background-color: greenyellow;
+ 
+}
+footer>iframe{
+  width: 100%;
+}
+
+
+
