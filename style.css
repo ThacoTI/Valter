@@ -22,7 +22,8 @@ div#tudo{
   width: 100%;
   height: 80%;*/
   background-image: url('AdobeStock_62132458-removebg-preview.png');
-  min-width: 200px;
+  max-width: 100%;
+  min-width: 400px;
   background-size: cover;
   background-repeat: no-repeat;
   
@@ -64,7 +65,7 @@ div#txt h1{
   text-align: center;
   color: white;
   font-family: var(--fonte-destaque);
-  font-size: 6em;
+  
   height: auto;
   font-weight: bolder;
   text-shadow: 7px 7px 10px rgba(0, 0, 0, 0.932);
@@ -72,7 +73,24 @@ div#txt h1{
   padding-top: 15px;
 }
 
-
+@media(max-width: 500px){
+  div#txt{
+    width: 90%;
+  }
+  h1{
+    font-size: 50px;
+  }
+  
+}
+@media(min-width: 800px){
+  div#txt{
+    width: 90%;
+  }
+  h1{
+    font-size: 6em;
+  }
+  
+}
 nav{
     
     background-color: #012626;
