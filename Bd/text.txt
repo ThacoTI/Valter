@@ -1,0 +1,49 @@
+""" from flask import Flask, render_template
+import sqlite3
+
+app = Flask(__name__)
+
+def init_db():
+    banco = sqlite3.connect('novo.db')
+    cursor = banco.cursor()
+    
+    # Criar a tabela se não existir
+    cursor.execute("""
+    """ CREATE TABLE IF NOT EXISTS pessoas (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome TEXT,
+        idade INTEGER """
+    #)
+    """)
+    
+    # Inserir dados iniciais se a tabela estiver vazia
+    cursor.execute("SELECT COUNT(*) FROM pessoas")
+    if cursor.fetchone()[0] == 0:
+        cursor.execute("INSERT INTO pessoas (nome, idade) VALUES (?, ?)", ("talia", 23))
+        cursor.execute("INSERT INTO pessoas (nome, idade) VALUES (?, ?)", ("myra", 43))
+        banco.commit()
+    
+    banco.close()
+
+@app.route('/')
+def index():
+    # Inicializar o banco de dados
+    init_db()
+    
+    banco = sqlite3.connect('novo.db')
+    cursor = banco.cursor()
+    
+    # Atualizar um registro na tabela pessoas
+    cursor.execute("UPDATE pessoas SET nome = 'simao' WHERE idade = 28")
+    banco.commit()
+    
+    # Selecionar todos os registros da tabela pessoas
+    cursor.execute("SELECT * FROM pessoas")
+    pessoas = cursor.fetchall()
+    
+    banco.close()
+    
+    return render_template('index.html', pessoas=pessoas)
+
+if __name__ == '__main__':
+    app.run(debug=True)"""

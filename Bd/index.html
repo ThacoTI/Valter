@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integração Flask e AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: '/get_data',
+                type: 'GET',
+                success: function(response) {
+                    console.log(response); // Verifica a resposta no console do navegador
+                    var pessoas = response.pessoas;
+                    // Exemplo de manipulação para exibir os dados em uma lista
+                    var listaPessoas = '';
+                    for (var i = 0; i < pessoas.length; i++) {
+                        listaPessoas += '<li>' + pessoas[i][1] + ' - ' + pessoas[i][2] + '</li>';
+                    }
+                    $('#listaPessoas').html(listaPessoas); // Insere a lista no elemento com id listaPessoas
+                },
+                error: function(error) {
+                    console.log(error); // Trata erros, se houver
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Dados da Tabela Pessoas</h1>
+    <ul id="listaPessoas">
+        <!-- Lista de pessoas será preenchida dinamicamente via JavaScript -->
+    </ul>
+</body>
+</html>
