@@ -140,7 +140,7 @@ nav .fac{
 }
 div#meio{
   height: auto;
-  width: 100vw;
+  width: 98vw;
   background-color: white;
   
 }
@@ -387,9 +387,10 @@ div#ft{
 div#fl> h4{
   text-align: center;
 }
+
+
+
+
 footer>iframe{
-  width: 100vw;
+  width: 98vw;
 }
-
-
-
